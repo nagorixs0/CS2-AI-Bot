@@ -1,0 +1,78 @@
+# CS2 AI Bot Configuration
+# This file contains all the configuration settings for the bot
+
+# Performance Settings
+performance:
+  target_fps: 30              # Target frames per second for the main loop
+  max_cpu_percent: 80         # Maximum CPU usage percentage
+  memory_limit_mb: 2048       # Maximum memory usage in MB
+
+# Computer Vision Settings
+computer_vision:
+  screenshot_method: "mss"    # Screenshot method: 'mss' or 'pyautogui'
+  detection_confidence: 0.5   # Minimum confidence for object detection
+  detection_model: "yolov8n"  # Object detection model to use
+  image_scale: 1.0           # Scale factor for captured images
+  roi:                       # Region of interest (optional)
+    x: 0
+    y: 0
+    width: 1920
+    height: 1080
+
+# Game Integration Settings
+game_integration:
+  gsi_port: 3000             # CS2 Game State Integration port
+  gsi_timeout: 1.0           # GSI connection timeout in seconds
+  game_window_title: "Counter-Strike 2"  # CS2 window title to find
+
+# Input Control Settings
+input_control:
+  mouse_sensitivity: 1.0      # Mouse sensitivity multiplier
+  reaction_time_min: 0.1      # Minimum reaction time in seconds
+  reaction_time_max: 0.3      # Maximum reaction time in seconds
+  humanlike_movement: true    # Enable human-like mouse movement
+  
+  # Key bindings (match your CS2 settings)
+  keybinds:
+    move_forward: "w"
+    move_backward: "s"
+    move_left: "a"
+    move_right: "d"
+    jump: "space"
+    crouch: "ctrl"
+    primary_fire: "mouse_left"
+    secondary_fire: "mouse_right"
+    reload: "r"
+    use: "e"
+    drop_weapon: "g"
+    buy_menu: "b"
+
+# AI Behavior Settings
+ai_behavior:
+  aggression_level: 0.5       # AI aggression (0.0 = passive, 1.0 = very aggressive)
+  aim_smoothing: true         # Enable smooth aiming
+  prediction_enabled: true    # Enable enemy position prediction
+  team_awareness: true        # Consider team positions
+  economy_management: true    # Enable buy decisions
+
+# Training Settings (for ML models)
+training:
+  collect_data: false         # Whether to collect training data
+  data_collection_rate: 10    # Frames per second for data collection
+  model_update_interval: 1000 # Update model every N frames
+  save_model_interval: 10000  # Save model every N frames
+
+# Debug Settings
+debug:
+  log_level: "INFO"           # Logging level: DEBUG, INFO, WARNING, ERROR
+  log_detections: false       # Log object detection results
+  save_screenshots: false     # Save screenshots for debugging
+  show_detection_overlay: false  # Show detection overlay on screen
+  performance_metrics: true   # Log performance metrics
+  
+# Safety Settings
+safety:
+  enable_safety_checks: true  # Enable safety mechanisms
+  max_actions_per_second: 10  # Maximum actions per second
+  emergency_stop_key: "f12"   # Emergency stop key
+  auto_pause_on_alt_tab: true # Pause when CS2 loses focus
