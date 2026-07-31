@@ -113,7 +113,6 @@ python -m src.test_vision
 - [Real-time AI Decision Making](docs/ai_architecture.md)
 
 ### Helpful Projects
-- [TheLlamainator/CS2-AI-Bot](https://github.com/TheLlamainator/CS2-AI-Bot) - YOLOv8-based approach
 - [igsmo/CSGO-Bot](https://github.com/igsmo/CSGO-Bot) - ML bot for CS:GO
 
 ## 🤝 Contributing
